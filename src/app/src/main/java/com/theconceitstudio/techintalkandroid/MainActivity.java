@@ -9,6 +9,7 @@ import android.view.View;
 import android.widget.Button;
 
 import com.theconceitstudio.techintalkandroid.activitydatapass.SecondActivity;
+import com.theconceitstudio.techintalkandroid.activitydatapass.UserModel;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -28,8 +29,10 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(currentActivity, SecondActivity.class);
                 intent.putExtra("userName", "This is reandom name");
+                intent.putExtra("userId", 1);
+                // passing complex object to the second activity
+                intent.putExtra("userDetail", new UserModel(1, "Usman"));
                 startActivity(intent);
-
             }
         });
 

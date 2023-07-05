@@ -14,11 +14,14 @@ public class SecondActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_seconda);
-
+        // receive data send by calling activity
         Intent intent = getIntent();
+        // receive simple data type
         String userName = intent.getStringExtra("userName");
-
-        Toast.makeText(this, userName, Toast.LENGTH_SHORT).show();
-
+        int userId = intent.getIntExtra("userId", 0);
+        // pull complex object from the intent
+        UserModel userModel = (UserModel) intent.getSerializableExtra("userDetail");
+        // show value on toast
+        Toast.makeText(this, "User Id is : "+userModel.UserId +" and the name is : "+ userModel.UserName, Toast.LENGTH_SHORT).show();
     }
 }
