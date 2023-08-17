@@ -10,22 +10,10 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.TechInTalkAndroid"
+        android:theme="@style/Theme.MyApplication"
         tools:targetApi="31">
         <activity
-            android:name=".buttonclicks.TextGetFromFieldActivity"
-            android:exported="false" />
-        <activity
-            android:name=".activitydatapass.SecondActivity"
-            android:exported="false" />
-        <activity
-            android:name=".activitiesnavigation.SecondActivity"
-            android:exported="false" />
-        <activity
-            android:name=".activitiesnavigation.FirstActivity"
-            android:exported="false" />
-        <activity
-            android:name=".DashboardActivity"
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
